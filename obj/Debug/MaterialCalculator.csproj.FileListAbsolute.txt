@@ -3,7 +3,6 @@ C:\Users\harry\source\repos\MaterialCalculator\MaterialCalculator\bin\Debug\Mate
 C:\Users\harry\source\repos\MaterialCalculator\MaterialCalculator\bin\Debug\MaterialCalculator.pdb
 C:\Users\harry\source\repos\MaterialCalculator\MaterialCalculator\bin\Debug\Siticone.UI.dll
 C:\Users\harry\source\repos\MaterialCalculator\MaterialCalculator\obj\Debug\MaterialCalculator.csproj.AssemblyReference.cache
-C:\Users\harry\source\repos\MaterialCalculator\MaterialCalculator\obj\Debug\MaterialCalculator.csproj.SuggestedBindingRedirects.cache
 C:\Users\harry\source\repos\MaterialCalculator\MaterialCalculator\obj\Debug\MaterialCalculator.Form1.resources
 C:\Users\harry\source\repos\MaterialCalculator\MaterialCalculator\obj\Debug\MaterialCalculator.Properties.Resources.resources
 C:\Users\harry\source\repos\MaterialCalculator\MaterialCalculator\obj\Debug\MaterialCalculator.csproj.GenerateResource.cache

@@ -30,6 +30,7 @@ namespace MaterialCalculator
 
         bool isstart = true; // so that the default value of label1 won't just get appended with the button you press 
         bool isop = true; // makes sure you cant have ++ or -- etc...
+        int div0count = 0; // for the easter egg when dividing by zero
 
         protected override CreateParams CreateParams // creates dropshadow
         {
@@ -295,13 +296,27 @@ namespace MaterialCalculator
 
         private void evaluate_Click(object sender, EventArgs e)
         {
+            if (label1.Text.Contains("÷0")) // easter egg when dividing by zero
+            {
+                if (div0count == 0)
+                {
+                    MessageBox.Show("Cannot divide by zero.", "I knew you would try this...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    div0count++; // adds one to the counter
+                    return; // skips the actual eval below
+                }
+                else
+                {
+                    MessageBox.Show("I still cannot divide by zero.", "I knew you would try this...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
             string equation = label1.Text.Replace("÷", "/").Replace("×", "*"); // processes the string so it is parsable by ncalc
 
             Expression expr = new Expression(equation); // creates a new ncalc.Expression instance with the above string
             label1.Text = expr.Evaluate().ToString(); // sets label1's text to the output
 
             isstart = true; // sets the next input to overwrite the text
-            isop = true; // irons out a few bugs
+            isop = false; // set to true if you encounter some bugs
         }
     }
 }
